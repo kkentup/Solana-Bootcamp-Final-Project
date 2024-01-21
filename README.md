@@ -6,14 +6,14 @@ Welcome to the **Web3 Restaurant review** project repository! This decentralized
 
 - [Overview](#overview)
 - [Features](#features)
-- [Frontend](#frontend)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-  - [Usage](#usage)
 - [Smart Contract](#smart-contract)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
   - [Usage](#usage)
+- [Frontend](#frontend)
+  - [Prerequisites](#prerequisites-1)
+  - [Installation](#installation-1)
+  - [Usage](#usage-1)
 - [License](#license)
 
 ## Overview
@@ -25,51 +25,6 @@ The **Web3 Restaurant Review* provides a user-friendly interface to participate 
 - Browse existing customer reviews.
 - Submit a new review.
 - Solana Wallet Integration: Connect your Solana wallet (e.g., Phantom) to participate directly.
-
-## Frontend
-
-### Prerequisites
-
-1. Node.js: Ensure Node.js is installed. Download it from [nodejs.org](https://nodejs.org/).
-
-### Installation
-
-1. Clone the repository:
-
-```bash
-  git clone https://github.com/kkentup/Solana-Bootcamp-Final-Project.git
-```
-
-2. Navigate to the frontend directory:
-
-```bash
-  cd Solana-Bootcamp-Final-Project/review_frontend
-```
-
-3. Install required npm packages:
-
-```bash
-  npm install
-```
-
-### Usage
-1. Create a production build of the app
-
-```bash
-  npm run build
-```
-
-2. Start the server:
-
-```bash
-  npm start
-```
-
-3. Open your web browser and navigate to `http://localhost:3000` to access the DApp.
-
-4. Connect your Solana wallet (e.g., Phantom) to the DApp. Need switch your wallet to Solana devnet before connection.
-
-5. Browse existing reviews and submit your own reviews.
 
 ## Smart Contract
 
@@ -120,11 +75,59 @@ Commitment: confirmed
   cargo build-bpf
 ```
 
-3. Deploy the program:
+3. Deploy the program and get program ID:
 
 ```bash
   solana program deploy ./target/deploy/review_contract.so
 ```
+
+4. Update program ID in Frontend code: \
+Set "REVIEW_PROGRAM_ID" to the program ID generated in above step in "review_frontend/src/pages/index.tsx"
+
+## Frontend
+
+### Prerequisites
+
+1. Node.js: Ensure Node.js is installed. Download it from [nodejs.org](https://nodejs.org/).
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+  git clone https://github.com/kkentup/Solana-Bootcamp-Final-Project.git
+```
+
+2. Navigate to the frontend directory:
+
+```bash
+  cd Solana-Bootcamp-Final-Project/review_frontend
+```
+
+3. Install required npm packages:
+
+```bash
+  npm install
+```
+
+### Usage
+1. Create a production build of the app
+
+```bash
+  npm run build
+```
+
+2. Start the server:
+
+```bash
+  npm start
+```
+
+3. Open your web browser and navigate to `http://localhost:3000` to access the DApp.
+
+4. Connect your Solana wallet (e.g., Phantom) to the DApp. Need switch your wallet to Solana devnet before connection.
+
+5. Browse existing reviews and submit your own reviews.
 
 ## License
 
