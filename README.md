@@ -1,6 +1,6 @@
 # Web3 Restaurant Review - README
 
-Welcome to the **Web3 Restaurant review** project repository! This decentralized application (DApp) leverages blockchain technology to implement an restaurant review platform on the Solana network. Customers can read and submit reviews of experiences in restaurants.
+Welcome to the **Web3 Restaurant review** project repository! This decentralized application (DApp) leverages blockchain technology to implement a restaurant review platform on the Solana network. Customers can read and submit reviews of experiences in restaurants.
 
 ## Table of Contents
 
