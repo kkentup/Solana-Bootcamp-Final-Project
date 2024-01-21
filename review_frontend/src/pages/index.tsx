@@ -7,7 +7,7 @@ import { fetchReviews } from "@/util/fetchReviews";
 import { useWallet } from "@solana/wallet-adapter-react";
 import ReviewForm from "@/components/Form";
 
-const REVIEW_PROGRAM_ID = "2xuLAJcbZTqZJ3DNf3DcHgRg7a1dBmtfLnjyvgkNq286";
+const REVIEW_PROGRAM_ID = "2njhMbZ5qj3di52ecQtrTUzAwPtC2QgNgH5hVpWiciHF";
 
 export default function Home() {
     const connection = new web3.Connection(web3.clusterApiUrl("devnet"));
@@ -19,6 +19,7 @@ export default function Home() {
     const [title, setTitle] = useState("");
     const [rating, setRating] = useState(0);
     const [description, setDescription] = useState("");
+    const [location, setLocation] = useState("");
 
     useEffect(() => {
         const fetchAccounts = async () => {
@@ -28,7 +29,7 @@ export default function Home() {
     }, []);
 
     const handleSubmit = () => {
-        const review = new Review(title, rating, description);
+        const review = new Review(title, rating, description, location);
         handleTransactionSubmit(review);
     };
 
@@ -94,9 +95,11 @@ export default function Home() {
                     title={title}
                     description={description}
                     rating={rating}
+                    location={location}
                     setTitle={setTitle}
                     setDescription={setDescription}
                     setRating={setRating}
+                    setLocation={setLocation}
                     handleSubmit={handleSubmit}
                 />
             </div>
