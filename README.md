@@ -62,6 +62,12 @@ Commitment: confirmed
   solana airdrop 1
 ```
 
+5. Clone the repository:
+
+```bash
+  git clone https://github.com/kkentup/Solana-Bootcamp-Final-Project.git
+```
+
 ### Usage
 1. Navigate to the contract directory:
 
@@ -91,20 +97,13 @@ Set "REVIEW_PROGRAM_ID" to the program ID generated in above step in "review_fro
 1. Node.js: Ensure Node.js is installed. Download it from [nodejs.org](https://nodejs.org/).
 
 ### Installation
-
-1. Clone the repository:
-
-```bash
-  git clone https://github.com/kkentup/Solana-Bootcamp-Final-Project.git
-```
-
-2. Navigate to the frontend directory:
+1. Navigate to the frontend directory:
 
 ```bash
   cd Solana-Bootcamp-Final-Project/review_frontend
 ```
 
-3. Install required npm packages:
+2. Install required npm packages:
 
 ```bash
   npm install
